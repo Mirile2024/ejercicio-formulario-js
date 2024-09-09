@@ -12,33 +12,32 @@ registerBtn.addEventListener("click", () => {
   console.log(`{email: ${nombre}, password: ${contraseña}}`)
 
   // 3. Obtenemos el valor del input radio
-  // const mayorEdad = document.querySelector(`[name=legalAge]:checked`)
-
-  // console.log(`{email: ${nombre}, password: ${contraseña},Mayor de edad: ${mayorEdad.value}}`)
+  const mayorEdad = document.querySelector(`[name=legalAge]:checked`)
+  console.log(`{email: ${nombre}, password: ${contraseña},Mayor de edad: ${mayorEdad.value}}`)
 
   // 4. Obtenemos el valor del input checkbox
 
-  // const terminos = document.getElementsByName("termsAndConditions");
-  // terminos.forEach(function(termino) {
-  //   console.log(`Acepta los terminos: ${termino.checked}`)
-  //   })
+  const terminos = document.getElementsByName("termsAndConditions");
+  terminos.forEach(function(termino) {
+    console.log(`{email: "${nombre}", password: "${contraseña}",Mayor de edad: "${mayorEdad.value}",Acepta los terminos: "${termino.checked}"`)
+    })
   
 
   // 5 Validamos si el usuario es mayor de edad. Si no, mostramos
   // un mensaje de error: "Debes ser mayor de edad para registrarte en el sitio"
-
-  const mayorEdad = document.querySelector(`[name=legalAge]:checked`)
-      if(mayorEdad==true){
-      console.log("Es Mayor de Edad")
-    }else{
-        console.log("Debes ser mayor de edad para registrarte en el sitio");
-      }
+  const mayoriaEdad = document.querySelector(`[name=legalAge]:checked`)
+  if(mayoriaEdad==null){
+    alert( "Debes seleccionar la edad");
+  }else if(mayoriaEdad.value=="false"){
+    alert("Debes ser mayor de edad para registrarte en el sitio");
+  }
+ 
     
   // 6 Validamos si el usuario aceptó los términos y condiciones. Si no, mostramos
   // un mensaje de error: "Debes aceptar los TyCs para registrarte en el sitio"
 
-  const terminos = document.getElementsByName("termsAndConditions");
-  terminos.forEach(function(termino) {
+  const terms = document.getElementsByName("termsAndConditions");
+  terms.forEach(function(termino) {
     console.log(`Acepta los terminos: ${termino.checked}`);
     if(termino.checked == "")
       {
@@ -46,11 +45,12 @@ registerBtn.addEventListener("click", () => {
         
     });
  
-
-
-    
-  
-
   // 7 Si todo esta correcto, mostramos por consola un objeto con la información
   // ingresada por el usuario.
+
+
+  console.log(`{email: "${nombre}", password: "${contraseña}",Mayor de edad: "${mayorEdad.value}",Acepta los terminos: "${termino.checked}"`)
+    
+
+
 });
