@@ -49,8 +49,7 @@ registerBtn.addEventListener("click", () => {
   // ingresada por el usuario.
 
 
-  console.log(`{email: "${nombre}", password: "${contraseña}",Mayor de edad: "${mayorEdad.value}",Acepta los terminos: "${termino.checked}"`)
+  console.log(`{email: "${nombre}", password: "${contraseña}",Mayor de edad: "${mayorEdad.value}",Acepta los terminos: "${terms.checked}"`)
     
-
 
 });
