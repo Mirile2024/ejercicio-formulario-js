@@ -18,10 +18,10 @@ registerBtn.addEventListener("click", () => {
 
   // 4. Obtenemos el valor del input checkbox
 
-  const terminos = document.getElementsByName("termsAndConditions");
-  terminos.forEach(function(termino) {
-    console.log(`Acepta los terminos: ${termino.checked}`)
-    })
+  // const terminos = document.getElementsByName("termsAndConditions");
+  // terminos.forEach(function(termino) {
+  //   console.log(`Acepta los terminos: ${termino.checked}`)
+  //   })
   
 
   // 5 Validamos si el usuario es mayor de edad. Si no, mostramos
@@ -34,22 +34,18 @@ registerBtn.addEventListener("click", () => {
         console.log("Debes ser mayor de edad para registrarte en el sitio");
       }
     
-  // 6 Vaidamos si el usuario aceptó los términos y condiciones. Si no, mostramos
+  // 6 Validamos si el usuario aceptó los términos y condiciones. Si no, mostramos
   // un mensaje de error: "Debes aceptar los TyCs para registrarte en el sitio"
-  // const terminos = document.querySelector('[name=termsAndConditions]:checked')
-  // if(terminos==false){
-  //   console.log("Debes aceptar los TyCs para registrarte en el sitio");
-  // }
-//   window.addEventListener("load", function(){
-//     let formulario = document.querySelector("form.Formulario-JS");
-// formulario.addEventListener("submit", function(e) {
-//   e.preventDefault();
-//   let campoNombre = document.querySelector("input.termsAndConditions");
-//   if(campoNombre.value=="")
-//     {
-//     alert("no ingreso campo")}
-//     });
-//   });
+
+  const terminos = document.getElementsByName("termsAndConditions");
+  terminos.forEach(function(termino) {
+    console.log(`Acepta los terminos: ${termino.checked}`);
+    if(termino.checked == "")
+      {
+      alert("Debes aceptar los TyCs para registrarte en el sitio")}
+        
+    });
+ 
 
 
     
